@@ -286,7 +286,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.picoxr": {
-      "version": "file:C:/Users/Usuario/Desktop/Nueva carpeta",
+      "version": "file:C:/Users/Dani/Downloads/PICO Unity Integration SDK_250",
       "depth": 0,
       "source": "local",
       "dependencies": {
