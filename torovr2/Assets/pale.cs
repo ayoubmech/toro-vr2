@@ -1,33 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class pale : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private int contador;
+    public TextMeshProUGUI textContador;
+
+    
     void Start()
     {
-        
+        contador = 0; // Initialize contador to 0
+        UpdateText(contador); // Update the text to reflect the initial contador value
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
     }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Caja"))
         {
-            SimuladorPrueba.Instance.CajaColocadaEnCarga(other.gameObject);
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Caja"))
-        {
-            SimuladorPrueba.Instance.CajaColocadaEnCarga(other.gameObject);
+            contador++;
+            UpdateText(contador); // Update the text when the contador changes
         }
     }
 
@@ -35,7 +34,16 @@ public class pale : MonoBehaviour
     {
         if (other.CompareTag("Caja"))
         {
-            SimuladorPrueba.Instance.CajaQuitadaDeCarga(other.gameObject);
+            contador--;
+            UpdateText(contador); // Update the text when the contador changes
+        }
+    }
+
+    private void UpdateText(int cont)
+    {
+        if (textContador != null)
+        {
+            textContador.text = cont.ToString(); // Update the text to the current value of contador
         }
     }
 }
