@@ -7,18 +7,11 @@ public class pale : MonoBehaviour
 {
     private int contador;
     public TextMeshProUGUI textContador;
-
     
     void Start()
     {
         contador = 0; // Initialize contador to 0
         UpdateText(contador); // Update the text to reflect the initial contador value
-    }
-
-    
-    void Update()
-    {
-        
     }
 
     void OnTriggerEnter(Collider other)
