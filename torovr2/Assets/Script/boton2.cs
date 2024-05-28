@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class boton : MonoBehaviour
+public class boton2 : MonoBehaviour
 {
     public void LoadScene(){
-        SceneManager.LoadScene("Hangar");
+        SceneManager.LoadScene("ZonaCarga");
     }
 }
